@@ -1,0 +1,29 @@
+@import "../../style/variables.scss";
+@import "../../style/mixins.scss";
+
+.container {
+  composes: container from global;
+  background: $lightgray;
+}
+
+.title {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 30px 0 10px;
+}
+
+.listItem {
+  margin: 0 -15px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+
+  &:hover {
+    border-left-color: $yellow;
+    background-color: $stonegray;
+    cursor: pointer;
+  }
+
+  @include media-min(sm) {
+    padding: 0 15px;
+  }
+}

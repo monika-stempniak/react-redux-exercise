@@ -1,0 +1,13 @@
+@import "../../style/variables.scss";
+@import "../../style/mixins.scss";
+
+.spinnerWrapper {
+  width: 100vw;
+  height: 100vh;
+  @include flexbox(center, center);
+  z-index: 1;
+}
+
+.spinner {
+  @include spinner(2px, $yellow, transparent, 50px, 50px, 0.5s);
+}

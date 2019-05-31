@@ -1,0 +1,11 @@
+.button {
+  composes: btn btn-primary from global;
+}
+
+.danger {
+  composes: btn-danger from global;
+}
+
+.warning {
+  composes: btn-warning from global;
+}

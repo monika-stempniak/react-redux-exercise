@@ -1,0 +1,30 @@
+@import "../../../../style/variables.scss";
+
+.row {
+  composes: row from global;
+}
+
+.column {
+  composes: col-12 col-md-6 from global;
+}
+
+.formGroup {
+  composes: form-group from global;
+  padding-bottom: 20px;
+  margin: 0;
+  position: relative;
+}
+
+.formControl {
+  composes: form-control from global;
+}
+
+.error {
+  position: absolute;
+  bottom: 0;
+  color: $red;
+}
+
+.buttonWrapper {
+  text-align: center;
+}

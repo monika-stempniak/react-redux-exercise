@@ -1,0 +1,11 @@
+# Supported Browsers
+
+last 2 versions
+> 0.2%
+not dead
+not Chrome < 69
+not ff < 62
+not ie < 11
+not Edge < 17
+not Safari < 12
+not op_mini all

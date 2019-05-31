@@ -1,0 +1,50 @@
+@import "../../style/variables.scss";
+@import "../../style/mixins.scss";
+
+.container {
+  composes: container from global;
+  background: $lightgray;
+}
+
+.header {
+  padding: 30px 20px 10px;
+}
+
+.title {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.linkWrapper {
+  margin-bottom: 10px;
+
+  @include media-min(md) {
+    position: relative;
+    margin-bottom: 0;
+  }
+}
+
+.link {
+  color: $darkgray;
+
+  @include media-min(md) {
+    position: absolute;
+    top: 5px;
+  }
+
+  &:hover {
+    color: $blue;
+  }
+}
+
+.addButtonWrapper {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.modal {
+  @include media-min(md) {
+    max-width: 500px;
+  }
+}

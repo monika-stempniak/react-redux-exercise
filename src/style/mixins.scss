@@ -1,0 +1,44 @@
+@import "./variables.scss";
+
+@mixin media-min($name) {
+  $min: map-get($breakpoints, $name);
+
+  @if $min != 0 {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin flexbox($justify-content, $align-items) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin spinner(
+  $borderWidth,
+  $borderColor,
+  $borderTopColor,
+  $width,
+  $height,
+  $speed
+) {
+  border: $borderWidth solid $borderColor;
+  border-top: $borderWidth solid $borderTopColor;
+  border-radius: 50%;
+  width: $width;
+  height: $height;
+  animation: spin $speed linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

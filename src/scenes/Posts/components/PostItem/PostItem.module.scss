@@ -1,0 +1,46 @@
+@import "../../../../style/variables.scss";
+@import "../../../../style/mixins.scss";
+
+.article {
+  padding: 20px;
+  border-bottom: 1px solid $stonegray;
+}
+
+.buttonWrapper {
+  margin-top: 20px;
+  @include flexbox(center, center);
+
+  @include media-min(sm) {
+    display: block;
+  }
+}
+
+.post {
+  @include flexbox(center, center);
+  text-align: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  @include media-min(sm) {
+    justify-content: space-between;
+    text-align: left;
+    flex-direction: row;
+  }
+}
+
+.content {
+  font-size: 14px;
+  margin-bottom: 20px;
+
+  @include media-min(sm) {
+    font-size: 16px;
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+}
+
+.spinnerWrapper {
+  width: auto;
+  height: 100px;
+  @include flexbox(center, center);
+}
